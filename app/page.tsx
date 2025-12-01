@@ -32,7 +32,7 @@ export default function Home() {
 
           <hr className="my-6 border-gray-100" />
 
-          {/* Form Input (Yang Anda Minta) */}
+          {/* Form Input */}
           <form className="space-y-4" action={async () => {
             "use server"
             console.log("Form submitted secure");
@@ -49,12 +49,12 @@ export default function Home() {
                 placeholder="Masukkan teks percobaan..."
               />
               <p className="text-xs text-gray-500 mt-1">
-                *Input ini aman dari XSS berkat konfigurasi keamanan.
+                *Input ini aman dari XSS & CSRF.
               </p>
             </div>
 
             <button
-              type="button"
+              type="submit"
               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 shadow-sm"
             >
               Simpan Data
