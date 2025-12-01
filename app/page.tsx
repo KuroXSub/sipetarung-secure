@@ -33,7 +33,10 @@ export default function Home() {
           <hr className="my-6 border-gray-100" />
 
           {/* Form Input (Yang Anda Minta) */}
-          <form className="space-y-4" action="#" method="POST">
+          <form className="space-y-4" action={async () => {
+            "use server"
+            console.log("Form submitted secure");
+          }}>
             <div>
               <label htmlFor="userText" className="block text-sm font-medium text-gray-700 mb-1">
                 Uji Input Teks
